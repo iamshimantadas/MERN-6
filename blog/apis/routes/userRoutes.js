@@ -25,7 +25,7 @@ router.post("/user/register", async (req, res) => {
         });
         result.save();
         if(result._id){
-            res.status(201).send({"status":"success"});
+            res.status(201).send({"status":"success", "message":"new user created"});
         }
     } catch (err) {
         res.status(400).send({ "status": "failed" });
